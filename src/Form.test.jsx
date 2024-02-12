@@ -7,3 +7,10 @@ test("testing onChange event",()=>{
          fireEvent.change(input,{target:{value:'a'}});
          expect(input.value).toBe("a");
 })
+
+test("testing Click Event",()=>{
+        render(<Form/>);
+        const btn = screen.getByRole("button")
+        fireEvent.click(btn);
+        expect(screen.getByText("Updated Name")).toBeInTheDocument();
+})
