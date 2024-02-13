@@ -34,3 +34,8 @@ test("testing Click Event case 2",()=>{
 })
 
 
+test("Snapshot Testing for Form Component",()=>{
+     const container = render(<Form/>);
+     expect(container).toMatchSnapshot();
+
+})

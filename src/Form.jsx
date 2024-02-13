@@ -10,7 +10,7 @@ function Form()
             <br/>
             <br/>
             <h1>{name}</h1>
-            <button onClick={()=>setName("Updated Name")}> Update data</button>
+            <button onClick={()=>setName("Updated Name")}> Update the data</button>
             <br/>
         </div>
     )
