@@ -1,5 +1,6 @@
 import './App.css';
 import Form from './Form';
+import Fun from './Fun';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <img title="imageTest"
        src='https://media.istockphoto.com/id/1477040247/photo/handshake-meeting-and-business-people-partnership-for-b2b-collaboration-onboarding-welcome-or.jpg?s=1024x1024&w=is&k=20&c=yTGH_eF2WJBX48NlksS5rJuR9pW5ZX6-yWwGu-mdR7w='/>
       <Form/>
+      <Fun/>
     </div>
   );
 }
