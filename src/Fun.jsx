@@ -13,7 +13,8 @@ export default function Fun()
             <h1>Functional Component</h1> 
             <button data-testid="btn1" onClick={handleData}>Update</button>
             <h2>{data}</h2>
-            <input type="text" defaultValue="Hello" disabled role="textbox"/>
+            <label htmlFor="user-name">Username:</label>
+            <input type="text" defaultValue="Hello"  id="user-name" disabled role="textbox"/>
             <button>Click Me</button>
             <button>Update</button>
             <button>Submit</button>
@@ -23,6 +24,9 @@ export default function Fun()
                 <option>2</option>
                 <option>3</option>
             </select>
+
+            <label htmlFor="skills">Skills</label>
+            <input type='checkbox' id="skills"/>
             
         </div>
     )

@@ -33,5 +33,15 @@ test("Get All By Role",()=>{
     }
 })
 
+test("Get By Label",()=>{
+    render(<Fun/>)
+    const input = screen.getByLabelText("Username:");
+    expect(input).toBeInTheDocument();
+})
 
 
+test("checkbox testing using getBylabel",()=>{
+    render(<Fun/>);
+    const checkbox = screen.getByLabelText('Skills');
+    expect(checkbox).toBeInTheDocument();
+})
