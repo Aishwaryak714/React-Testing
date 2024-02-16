@@ -7,3 +7,31 @@ test("Function component method testing case 1",()=>{
     fireEvent.click(btn);
     expect(screen.getByText("Hello")).toBeInTheDocument();
 })
+
+test("Get By role",()=>{
+    render(<Fun/>);
+    let inputFeild = screen.getByRole("textbox");
+    // const btn = screen.getByText("Update");
+    // expect(btn).toBeInTheDocument();
+    expect(inputFeild).toBeInTheDocument();
+    expect(inputFeild).toHaveValue("Hello");
+    expect(inputFeild).toBeDisabled();
+})
+
+test("Get All By Role",()=>{
+    render(<Fun/>);
+    let btns = screen.getAllByRole('button');
+    expect(btns[0]).toBeInTheDocument();
+    let options= screen.getAllByRole('option')
+    for (let i=0;i<btns.length;i++)
+    {
+        expect(btns[i]).toBeInTheDocument();
+    }
+    for (let i=0;i<options.length;i++)
+    {
+        expect(options[i]).toBeInTheDocument();
+    }
+})
+
+
+
