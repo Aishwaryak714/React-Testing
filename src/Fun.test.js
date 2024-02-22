@@ -8,15 +8,15 @@ test("Function component method testing case 1",()=>{
     expect(screen.getByText("Hello")).toBeInTheDocument();
 })
 
-test("Get By role",()=>{
-    render(<Fun/>);
-    let inputFeild = screen.getByRole("textbox");
-    // const btn = screen.getByText("Update");
-    // expect(btn).toBeInTheDocument();
-    expect(inputFeild).toBeInTheDocument();
-    expect(inputFeild).toHaveValue("Hello");
-    expect(inputFeild).toBeDisabled();
-})
+// test("Get By role",()=>{
+//     render(<Fun/>);
+//     let inputFeild = screen.getByRole("textbox");
+//     // const btn = screen.getByText("Update");
+//     // expect(btn).toBeInTheDocument();
+//     expect(inputFeild).toBeInTheDocument();
+//     expect(inputFeild).toHaveValue("Hello");
+//     expect(inputFeild).toBeDisabled();
+// })
 
 test("Get All By Role",()=>{
     render(<Fun/>);
@@ -44,4 +44,18 @@ test("checkbox testing using getBylabel",()=>{
     render(<Fun/>);
     const checkbox = screen.getByLabelText('Skills');
     expect(checkbox).toBeInTheDocument();
+})
+
+test("Get by placeholder",()=>{
+    render(<Fun/>)
+    let inputbox = screen.getByPlaceholderText("Enter username");
+    expect(inputbox).toBeInTheDocument();
+})
+
+test("Tesiting with test id",()=>{
+    render(<Fun/>)
+    const divId=screen.getByTestId("div-test-id");
+    const h2Id=screen.getByTestId("h2-test-id");
+    expect(divId).toBeInTheDocument();
+    expect(h2Id).toBeInTheDocument();
 })

@@ -27,6 +27,16 @@ export default function Fun()
 
             <label htmlFor="skills">Skills</label>
             <input type='checkbox' id="skills"/>
+
+            <input type="text" placeholder="Enter username"/>
+
+            <div data-testid="div-test-id">
+                Testing with Test ID
+            </div>
+
+            <h2 data-testid="h2-test-id">
+                H2tag testing id
+            </h2>
             
         </div>
     )
